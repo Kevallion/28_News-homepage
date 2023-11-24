@@ -29,6 +29,7 @@ a:visited {
 
 body {
   font-family: Inter, sans-serif;
+  background-color: #FFFDFA;
   color: hsl(240, 100%, 5%);
   font-size: 0.938rem;
   font-weight: 400;

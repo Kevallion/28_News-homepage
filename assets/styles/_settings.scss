@@ -47,6 +47,7 @@ a{
 
 body{
     font-family: $font1;
+    background-color: #FFFDFA;
     color: $color4;
        @include fontStyle(0.938rem,400,26px,0);
 
