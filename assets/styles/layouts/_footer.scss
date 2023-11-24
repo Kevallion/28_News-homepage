@@ -1,0 +1,40 @@
+footer{
+    margin-top: 65px;
+    padding-bottom: 82px;
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap:32px;
+        flex-wrap: wrap;
+        @media screen and (min-width: 768px) {
+           flex-direction: row; 
+           justify-content: space-between;
+        }
+        li{
+            
+            display: flex;
+            max-width: 340px;
+            
+            img{
+            width: 100px;
+            height: 127px;
+            margin-right: 24px;
+            }
+
+            div{
+                h3{
+                    color: $color2;
+                }
+                
+                h5{
+                    margin:12px 0 9px;
+                    cursor: pointer;
+                   &:hover{
+                    color:$color6;
+                   }
+                }
+            }
+
+        }
+    }
+}

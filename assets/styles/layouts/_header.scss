@@ -1,0 +1,101 @@
+header{
+    .container{
+        padding-top: 28px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom:32px;
+        @media screen and (min-width: 768px) {
+            padding-top: 89px;
+            margin-bottom: 55px;
+        }
+        img{
+            width: 44.98px;
+            height: 28px;
+            @media screen and (min-width: 768px) {
+                width: 64.09px;
+                height: 39.9px;
+            }
+        }
+        nav{
+            #burger {
+                display: flex;
+                position: relative;
+                z-index: 100;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 17px;
+                cursor: pointer;
+
+                @media screen and (min-width: 768px) {
+                    display: none;
+                }
+
+                span{
+                    display: block;
+                    width: 40px;
+                    height: 3px;
+                    background: $color4;
+                    transition: 0.2s ease-in-out;
+                }
+
+             &.active{
+                span{
+                    position: fixed;
+                    right:28px;
+                    top: 28px;
+                    
+                }
+                span:nth-child(1){
+                    transform: rotate(45deg)
+                }
+                span:nth-child(2){
+                    opacity: 0;
+                }
+                span:nth-child(3){
+                    transform: rotate(-45deg)
+                }
+            }
+            // style lien du menu
+            }
+             #nav-list{
+                display: flex;
+                @include fontStyle(1.125rem,400,24px,0);
+                @media screen and (max-width: 768px) {
+                    flex-direction: column;
+                    gap: 24px;
+                    padding:144px  29px;
+                    top: 0;
+                    right:-256px;
+                    position: fixed;
+                    background: white;
+                    width: 256px;
+                    height: 100vh;
+                    z-index: 80;
+                }
+                
+                
+                @media screen and (min-width: 768px) {
+                    @include fontStyle(0.938rem,400,26px,0);
+                    justify-content: space-between;
+                    flex-direction: row;
+                    width: 431px;
+                    max-width: 431px;
+                }
+                a{
+                    transition: 0.2s ease-in-out;
+                    &:hover{
+                        color: $color6;
+                    }
+                }
+             }
+
+             #nav-list.active{
+                transition: 0.4s ease-in-out;
+                right: 0;
+             }
+
+
+        }
+    }
+}
